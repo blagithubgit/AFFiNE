@@ -105,10 +105,10 @@ jobs:
         targets:
           - name: x86_64-unknown-linux-gnu
             file: server-native.node
-          - name: aarch64-unknown-linux-gnu
-            file: server-native.arm64.node
-          - name: armv7-unknown-linux-gnueabihf
-            file: server-native.armv7.node
+          # - name: aarch64-unknown-linux-gnu
+          #   file: server-native.arm64.node
+          # - name: armv7-unknown-linux-gnueabihf
+          #   file: server-native.armv7.node
 
     steps:
       - uses: actions/checkout@v4
@@ -231,4 +231,4 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           provenance: true
           file: .github/deployment/node/Dockerfile
-          tags: ghcr.io/toeverything/affine-graphql:${{env.RELEASE_FLAVOR}}-${{ env.GIT_SHORT_HASH }},ghcr.io/toeverything/affine-graphql:${{env.RELEASE_FLAVOR}}
+          tags: ghcr.io/blagithubgit/affine-graphql:${{env.RELEASE_FLAVOR}}-${{ env.GIT_SHORT_HASH }},ghcr.io/blagithubgit/affine-graphql:${{env.RELEASE_FLAVOR}}
