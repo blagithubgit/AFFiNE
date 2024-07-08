@@ -17,7 +17,7 @@ export function getRuntimeConfig(buildFlags: BuildFlags): RuntimeConfig {
       enablePreloading: true,
       enableNewSettingModal: true,
       enableNewSettingUnstableApi: false,
-      enableCloud: false,
+      enableCloud: true,
       enableCaptcha: false,
       enableEnhanceShareMode: false,
       enablePayment: false,
