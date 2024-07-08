@@ -7,6 +7,6 @@ WORKDIR /app
 
 RUN apt-get update && \
   apt-get install -y --no-install-recommends openssl && \
-  rm -rf /var/lib/apt/lists/*
+  rm -rf /var/lib/apt/lists/* && npx prisma migrate status || true
 
 CMD ["node", "--import", "./scripts/register.js", "./dist/index.js"]
